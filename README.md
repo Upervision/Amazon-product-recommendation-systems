@@ -6,7 +6,7 @@ Building and comparing recommendation engines on Amazon Electronics ratings data
 
 E-commerce platforms rely on recommendation systems to surface relevant products from catalogs too large to browse manually. This project implements and evaluates three recommendation paradigms on Amazon's Electronics category ratings — ratings only, with no review text or product metadata, to keep the modeling task free of content bias — and compares them on both prediction accuracy and recommendation quality.
 
-Full analysis: [`Rex Pei's recommendation systems./RecommendationSystem.ipynb`](Rex Pei's recommendation systems./RecommendationSystem.ipynb)
+Full analysis: [`Rex Pei's recommendation systems/RecommendationSystem.ipynb`](Rex Pei's recommendation systems/RecommendationSystem.ipynb)
 
 ## Dataset
 
