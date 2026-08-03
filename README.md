@@ -22,8 +22,24 @@ Full analysis: [`RecommendationSystem.ipynb`](RecommendationSystem/Recommendatio
 | **1. Rank-Based** | Popularity recommender using average rating, with a minimum-interactions threshold to filter out low-volume outliers |
 | **2. Collaborative Filtering** | Memory-based CF in both directions — User-User and Item-Item similarity — via `KNNBasic` |
 | **3. Model-Based CF** | Matrix factorization via `SVD`, learning latent user/item factors |
+| **4. AR-NCF** | Multi-head-self-attention, Residual connection, Layer normalization, Regularization |
 
 Every collaborative filtering model was built twice — a default-parameter baseline, then re-tuned with `GridSearchCV` (3-fold cross-validation) over similarity metric, neighborhood size, learning rate, and regularization — so the effect of tuning is measured directly rather than assumed.
+
+## AR-NCF (Deep Learning Model)
+Deep learning model AR‑NCF extends classic NCF by adding a multi‑head self‑attention module paired with residual connections and layer normalization, aiming to extract complex interaction patterns between user and item embeddings for explicit rating prediction.
+
+**Process**: User ID ──▶ Embedding ──▶ Flatten ──┬──▶ GMF(Multiply)
+Item ID ──▶ Embedding ──▶ Flatten ──┘
+        │
+        └──▶ Concat ──▶ Deep MLP ──▶ Multi‑Head Self‑Attention
+                        │              │
+                        └──▶ Residual Projection
+                                     │
+                            Residual Add + LayerNorm
+                                     │
+GMF output ──────────────────────────┴──▶ Feature Fusion ──▶ Rating Prediction
+
 
 ## Evaluation
 
@@ -48,6 +64,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 - User-User CF: `k=40, min_k=6, similarity=cosine`
 - Item-Item CF: `k=30, min_k=6, similarity=msd`
 - SVD: `n_epochs=20, lr_all=0.01, reg_all=0.2`
+- AR-NCF: `Total params: 5,288,513, Trainable params: 5,288,513, Non-trainable params: 0`
 
 ## Recommendations
 
@@ -59,7 +76,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 
 ## Tech Stack
 
-- Python, pandas, NumPy
+- Python, pandas, NumPy, TensorFlow
 - [`scikit-surprise`](http://surpriselib.com/) — `KNNBasic`, `SVD`, `GridSearchCV`
 - Matplotlib, Seaborn — EDA and evaluation visualizations
 
@@ -71,6 +88,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 4. Model 3 — Model-based CF: `SVD` matrix factorization, baseline and tuned
 5. Evaluation: RMSE, Precision@k / Recall@k / F1@k across all models
 6. Business recommendations and conclusion
+7. Model 4: AR-NCF (Deep Learning Model): Find total and trainable params
 
 ## Setup
 
