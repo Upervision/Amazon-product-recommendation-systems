@@ -100,4 +100,4 @@ Update the dataset path in the notebook to point to your local copy of the ratin
 
 ## Acknowledgments
 
-Dataset courtesy of Julian McAuley (UCSD) — [Amazon product data](http://jmcauley.ucsd.edu/data/amazon/). Completed as an applied project for the MIT IDSS AI and Data Science Program (delivered via Great Learning).
+Dataset courtesy of Julian McAuley (UCSD) — [Amazon product data](http://jmcauley.ucsd.edu/data/amazon/). Completed as an applied project for the MIT IDSS AI and Data Science Program.
