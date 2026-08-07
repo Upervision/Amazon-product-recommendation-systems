@@ -76,7 +76,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 
 ## Tech Stack
 
-- Python, pandas, NumPy, TensorFlow
+- Python, pandas, NumPy, TensorFlow (Keras)
 - [`scikit-surprise`](http://surpriselib.com/) — `KNNBasic`, `SVD`, `GridSearchCV`
 - Matplotlib, Seaborn — EDA and evaluation visualizations
 
