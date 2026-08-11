@@ -2,6 +2,7 @@ pandas
 numpy==1.26.0        # pinned: scikit-surprise's compiled extensions can fail to build against numpy 2.x
 tensorflow
 tensorflow.keras
+pytorch
 scikit-surprise       # provides `surprise`: KNNBasic, SVD, GridSearchCV, Reader, Dataset
 matplotlib
 seaborn
