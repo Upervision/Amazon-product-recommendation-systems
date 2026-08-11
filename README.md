@@ -90,8 +90,8 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 4. Model 3 — Model-based CF: `SVD` matrix factorization, baseline and tuned
 5. Evaluation: RMSE, Precision@k / Recall@k / F1@k across all models
 6. Business recommendations and conclusion
-7. Model 4: AR-NCF (Self-innovated Deep Learning Model): Find total and trainable params
-8. Model 5: Transformer: Architecture and dummy predictions
+7. Model 4 — AR-NCF (Self-innovated Deep Learning Model): Find total and trainable params
+8. Model 5 — Transformer: Architecture and dummy predictions
 
 ## Setup
 
