@@ -23,7 +23,7 @@ Full analysis: [`RecommendationSystem.ipynb`](RecommendationSystem/Recommendatio
 | **2. Collaborative Filtering** | Memory-based CF in both directions — User-User and Item-Item similarity — via `KNNBasic` |
 | **3. Model-Based CF** | Matrix factorization via `SVD`, learning latent user/item factors |
 | **4. AR-NCF (Self-experimented NCF-based model)** | Multi-head-self-attention, Residual connection, Layer normalization, Regularization |
-| **5. Transformer (User-Item Transformer Recommender)** | Multi-head-self-attention, Transformer encoder, Scaled dot-product attention, Feed-forward network |
+| **5. Transformer (User-Item Transformer Recommender)** | Multi-head-self-attention, Transformer encoder stack, Residual + LayerNorm, Type embeddings, Mean pooling, GELU + dropout |
 
 Every collaborative filtering model was built twice — a default-parameter baseline, then re-tuned with `GridSearchCV` (3-fold cross-validation) over similarity metric, neighborhood size, learning rate, and regularization — so the effect of tuning is measured directly rather than assumed.
 
