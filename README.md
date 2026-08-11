@@ -23,6 +23,7 @@ Full analysis: [`RecommendationSystem.ipynb`](RecommendationSystem/Recommendatio
 | **2. Collaborative Filtering** | Memory-based CF in both directions — User-User and Item-Item similarity — via `KNNBasic` |
 | **3. Model-Based CF** | Matrix factorization via `SVD`, learning latent user/item factors |
 | **4. AR-NCF (Self-experimented NCF-based model)** | Multi-head-self-attention, Residual connection, Layer normalization, Regularization |
+| **5. Transformer (User-Item Transformer Recommender)** | Multi-head-self-attention, Transformer encoder, Scaled dot-product attention, Feed-forward network |
 
 Every collaborative filtering model was built twice — a default-parameter baseline, then re-tuned with `GridSearchCV` (3-fold cross-validation) over similarity metric, neighborhood size, learning rate, and regularization — so the effect of tuning is measured directly rather than assumed.
 
@@ -65,6 +66,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 - Item-Item CF: `k=30, min_k=6, similarity=msd`
 - SVD: `n_epochs=20, lr_all=0.01, reg_all=0.2`
 - AR-NCF: `Total params: 5,288,513, Trainable params: 5,288,513, Non-trainable params: 0`
+- Transformer: `Device: CPU, Total params: 165185, Dummy predictions: [-0.02624202 -0.6793151  -0.46707577 -0.908867`
 
 ## Recommendations
 
@@ -76,7 +78,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 
 ## Tech Stack
 
-- Python, pandas, NumPy, TensorFlow (Keras)
+- Python, pandas, NumPy, TensorFlow (Keras), PyTorch
 - [`scikit-surprise`](http://surpriselib.com/) — `KNNBasic`, `SVD`, `GridSearchCV`
 - Matplotlib, Seaborn — EDA and evaluation visualizations
 
@@ -89,6 +91,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 5. Evaluation: RMSE, Precision@k / Recall@k / F1@k across all models
 6. Business recommendations and conclusion
 7. Model 4: AR-NCF (Self-innovated Deep Learning Model): Find total and trainable params
+8. Model 5: Transformer: Architecture and dummy predictions
 
 ## Setup
 
