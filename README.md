@@ -66,7 +66,7 @@ Hyperparameter tuning improved every collaborative filtering model. The tuned SV
 - Item-Item CF: `k=30, min_k=6, similarity=msd`
 - SVD: `n_epochs=20, lr_all=0.01, reg_all=0.2`
 - AR-NCF: `Total params: 5,288,513, Trainable params: 5,288,513, Non-trainable params: 0`
-- Transformer: `Device: CPU, Total params: 165185, Dummy predictions: [-0.02624202 -0.6793151  -0.46707577 -0.908867`
+- Transformer: `Device: CPU, Total params: 165185, Dummy predictions: [-0.02624202 -0.6793151  -0.46707577 -0.908867]`
 
 ## Recommendations
 
