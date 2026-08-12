@@ -25,7 +25,7 @@ Full analysis: [`RecommendationSystem.ipynb`](RecommendationSystem/Recommendatio
 | **4. AR-NCF (Self-experimented NCF-based model)** | Multi-head-self-attention, Residual connection, Layer normalization, Regularization |
 | **5. Transformer (User-Item Transformer Recommender)** | Multi-head-self-attention, Transformer encoder stack, Residual + LayerNorm, Type embeddings, Mean pooling, GELU + dropout |
 
-Every collaborative filtering model was built twice — a default-parameter baseline, then re-tuned with `GridSearchCV` (3-fold cross-validation) over similarity metric, neighborhood size, learning rate, and regularization — so the effect of tuning is measured directly rather than assumed.
+Every non-deep learning collaborative filtering model was built twice — a default-parameter baseline, then re-tuned with `GridSearchCV` (3-fold cross-validation) over similarity metric, neighborhood size, learning rate, and regularization — so the effect of tuning is measured directly rather than assumed.
 
 ## AR-NCF
 AR-NCF extends classic NCF by adding a multi‑head self‑attention module paired with residual connections and layer normalization, aiming to extract complex interaction patterns between user and item embeddings for explicit rating prediction.
